@@ -1,0 +1,13 @@
+.button-grid2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  /* 5 columns */
+    grid-template-rows: repeat(10, 1fr);    /* 10 rows */
+    row-gap: 3px;  /* Vertical space between rows */
+    column-gap: 3px; /* Horizontal space between columns */
+}
+
+.button-grid2 button {
+    padding: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}

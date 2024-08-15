@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Game</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+
+<!-- Home Page -->
+<div id="home-page" class="flex flex-col items-center space-y-6">
+  <h1 class="text-4xl font-bold">Party Game</h1>
+  <input id="username-input" type="text" placeholder="Enter your name" class="text-black px-4 py-2 rounded">
+  <button id="create-room-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create Room</button>
+  <button id="join-room-btn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Join Room</button>
+</div>
+
+<!-- Create Room Page -->
+<div id="create-room-page" class="hidden flex flex-col items-center space-y-6">
+  <h1 class="text-4xl font-bold">Room ID: <span id="room-id">XXXX</span></h1>
+  <h2 class="text-2xl">Players:</h2>
+  <ul id="create-room-players" class="list-disc"></ul>
+  <button id="start-game-btn" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Start Game</button>
+</div>
+
+<!-- Join Room Page -->
+<div id="join-room-page" class="hidden flex flex-col items-center space-y-6">
+  <h1 class="text-4xl font-bold">Join Room</h1>
+  <input id="room-id-input" type="text" placeholder="Enter Room ID" class="text-black px-4 py-2 rounded">
+  <button id="join-room-submit-btn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Join Room</button>
+</div>
+
+<!-- In Room Page -->
+<div id="in-room-page" class="hidden flex flex-col items-center space-y-6">
+  <h1 class="text-4xl font-bold">Room ID: <span id="room-id2">XXXX</span></h1>
+  <h2 class="text-2xl">Players:</h2>
+  <ul id="join-room-players" class="list-disc"></ul>
+</div>
+
+<!-- Game Page -->
+<div id="game-page" class="hidden flex flex-col items-center space-y-6">
+  <h1 class="text-4xl font-bold">Game Screen</h1>
+  <p class="text-xl">This is where the game will be played.</p>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+</body>
+</html>
